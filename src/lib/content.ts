@@ -153,8 +153,7 @@ export const gettingThere = {
       en: 'A few rooms are available at the château (first come, first served). We also recommend hotels and guesthouses near Sens and Villeneuve-sur-Yonne.',
     },
   },
-  mapUrl:
-    'https://maps.google.com/?q=Château+de+Vallery,+89150+Vallery,+France',
+  mapUrl: 'https://maps.app.goo.gl/sx6hDY5QsLikCHGM6',
 };
 
 // ─── Programme / Timeline ────────────────────
@@ -173,9 +172,9 @@ export const programme = {
         en: 'Guest arrival',
       },
       description: {
-        fr: "Rendez-vous à l'église Saint-Thomas de Vallery",
-        es: 'Encuentro en la iglesia Saint-Thomas de Vallery',
-        en: 'Meet at Saint-Thomas Church, Vallery',
+        fr: 'Rendez-vous à la Cathédrale Notre-Dame de Saint-Paul-Trois-Châteaux',
+        es: 'Encuentro en la Catedral Notre-Dame de Saint-Paul-Trois-Châteaux',
+        en: 'Meet at the Cathedral of Notre-Dame de Saint-Paul-Trois-Châteaux',
       },
     },
     {
@@ -296,9 +295,9 @@ export const faq = {
         en: 'Is there parking?',
       },
       answer: {
-        fr: 'Oui, un parking gratuit est disponible au château de Vallery.',
-        es: 'Sí, hay un estacionamiento gratuito disponible en el castillo de Vallery.',
-        en: 'Yes, free parking is available at the Château de Vallery.',
+        fr: 'Oui, un parking gratuit est disponible.',
+        es: 'Sí, hay un estacionamiento gratuito disponible.',
+        en: 'Yes, free parking is available.',
       },
     },
     {
@@ -308,9 +307,9 @@ export const faq = {
         en: 'Where can we stay?',
       },
       answer: {
-        fr: 'Quelques chambres sont disponibles au château. Sinon, nous recommandons les hôtels de Sens et Villeneuve-sur-Yonne (à 20 minutes en voiture).',
-        es: 'Hay algunas habitaciones disponibles en el castillo. De lo contrario, recomendamos hoteles en Sens y Villeneuve-sur-Yonne (a 20 minutos en coche).',
-        en: 'A few rooms are available at the château. Otherwise, we recommend hotels in Sens and Villeneuve-sur-Yonne (20 minutes by car).',
+        fr: 'ASDASDASDASDDS',
+        es: 'ASDASDASDASDDS',
+        en: 'ASDASDASDASDDS',
       },
     },
     {

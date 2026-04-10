@@ -1,13 +1,15 @@
-"use client";
+'use client';
 
-import { useLocale, t } from "@/lib/i18n";
-import { hero } from "@/lib/content";
+import { useLocale, t } from '@/lib/i18n';
+import { hero } from '@/lib/content';
 
 export default function Hero() {
   const { locale } = useLocale();
 
   const scrollToProgramme = () => {
-    document.getElementById("programme")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById('programme')
+      ?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -15,10 +17,17 @@ export default function Hero() {
       {/* Background image placeholder */}
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/20 to-charcoal/40 z-10" />
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{
-          backgroundImage: "url('/images/hero.jpg')",
-          backgroundColor: "#8b7d6b",
+          backgroundImage: "url('/images/hero_mobile.jpeg')",
+          backgroundColor: '#8b7d6b',
+        }}
+      />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+        style={{
+          backgroundImage: "url('/images/hero.jpeg')",
+          backgroundColor: '#8b7d6b',
         }}
       />
 

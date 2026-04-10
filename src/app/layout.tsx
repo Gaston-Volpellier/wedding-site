@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: 'Alice & Gaston — 26 septembre 2026',
   description:
     'Nous avons hâte de célébrer ce jour avec vous. Toutes les informations pour notre mariage.',
+  icons: {
+    icon: [{ url: '/icon.png', type: 'image/png' }],
+    apple: [{ url: '/icon.png', type: 'image/png' }],
+  },
 };
 
 export default function RootLayout({
