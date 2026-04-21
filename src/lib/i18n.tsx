@@ -1,14 +1,25 @@
-"use client";
+'use client';
 
 import {
   createContext,
   useContext,
   useState,
   useCallback,
+  useEffect,
+  useSyncExternalStore,
   type ReactNode,
-} from "react";
+} from 'react';
 
-export type Locale = "fr" | "es" | "en";
+export type Locale = 'fr' | 'es' | 'en';
+
+function detectLocale(): Locale {
+  const langCode = (navigator.language || '').split('-')[0].toLowerCase();
+
+  if (langCode === 'es') return 'es';
+  if (langCode === 'en') return 'en';
+
+  return 'fr';
+}
 
 interface I18nContextType {
   locale: Locale;
@@ -16,16 +27,25 @@ interface I18nContextType {
 }
 
 const I18nContext = createContext<I18nContextType>({
-  locale: "fr",
+  locale: 'fr',
   setLocale: () => {},
 });
 
+const subscribe = () => () => {};
+const serverLocale = (): Locale => 'fr';
+
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("fr");
+  const detected = useSyncExternalStore(subscribe, detectLocale, serverLocale);
+  const [override, setOverride] = useState<Locale | null>(null);
+
+  const locale = override ?? detected;
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   const setLocale = useCallback((l: Locale) => {
-    setLocaleState(l);
-    document.documentElement.lang = l;
+    setOverride(l);
   }, []);
 
   return (

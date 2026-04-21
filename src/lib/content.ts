@@ -112,34 +112,34 @@ export const gettingThere = {
       icon: 'train',
       title: { fr: 'En train', es: 'En tren', en: 'By train' },
       details: {
-        fr: 'Gare de Sens (TER depuis Paris Bercy, ~1h10). Nous organiserons des navettes depuis la gare.',
-        es: 'Estación de Sens (TER desde Paris Bercy, ~1h10). Organizaremos shuttles desde la estación.',
-        en: 'Sens station (TER from Paris Bercy, ~1h10). We will arrange shuttles from the station.',
+        fr: "Depuis Paris : Gare de Lyon jusqu'à Valence TGV (~2h10) ou Avignon TGV (~2h30). Et de là jusqu'à Grignan en auto, ~1h.",
+        es: 'Desde Paris Gare de Lyon hasta Valence TGV (~2h10) o Avignon TGV (~2h30). Y desde cualquiera de ellas hasta Grignan en auto, ~1h.',
+        en: 'From Paris Gare de Lyon to Valence TGV (~2h10) or Avignon TGV (~2h30). And from either of them to Grignan by car, ~1h.',
       },
     },
     {
       icon: 'car',
       title: { fr: 'En voiture', es: 'En coche', en: 'By car' },
       details: {
-        fr: 'Depuis Paris : A6 direction Lyon, sortie Courtenay. Parking disponible sur place.',
-        es: 'Desde París: A6 dirección Lyon, salida Courtenay. Estacionamiento disponible en el lugar.',
-        en: 'From Paris: A6 towards Lyon, exit Courtenay. Free parking available on-site.',
+        fr: "Depuis Paris, 7h de route jusqu'à Grignan.",
+        es: 'Desde París, 7h de ruta hasta Grignan.',
+        en: 'From Paris, 7h drive to Grignan.',
       },
     },
     {
       icon: 'plane',
       title: { fr: 'En avion', es: 'En avión', en: 'By plane' },
       details: {
-        fr: 'Aéroports de Paris (CDG ou Orly). Location de voiture ou TGV + TER recommandés.',
-        es: 'Aeropuertos de París (CDG u Orly). Se recomienda alquilar un coche o TGV + TER.',
-        en: 'Paris airports (CDG or Orly). Car rental or TGV + TER recommended.',
+        fr: 'Les aéroports les plus proches sont Aix-en-Provence ou Marseille.',
+        es: 'Los aeropuertos mas cercanos son Aix-en-Provence o Marsella.',
+        en: 'The nearest airports are Aix-en-Provence or Marseille.',
       },
     },
   ],
   parking: {
-    fr: 'Un parking gratuit est disponible au château.',
-    es: 'Hay un estacionamiento gratuito disponible en el castillo.',
-    en: 'Free parking is available at the château.',
+    fr: 'Un parking gratuit est disponible au domaine.',
+    es: 'Hay un estacionamiento gratuito disponible en el dominio.',
+    en: 'Free parking is available at the domain.',
   },
   accommodation: {
     title: {
@@ -148,10 +148,29 @@ export const gettingThere = {
       en: 'Accommodation',
     },
     text: {
-      fr: 'Quelques chambres sont disponibles au château (premier arrivé, premier servi). Nous recommandons également les hôtels et gîtes à proximité de Sens et Villeneuve-sur-Yonne.',
-      es: 'Hay algunas habitaciones disponibles en el castillo (por orden de llegada). También recomendamos hoteles y casas rurales cerca de Sens y Villeneuve-sur-Yonne.',
-      en: 'A few rooms are available at the château (first come, first served). We also recommend hotels and guesthouses near Sens and Villeneuve-sur-Yonne.',
+      fr: 'Nous recommandons également les hôtels et gîtes à proximité de Sens et Villeneuve-sur-Yonne.',
+      es: 'También recomendamos hoteles y casas rurales cerca de Sens y Villeneuve-sur-Yonne.',
+      en: 'We recommend hotels and guesthouses near Sens and Villeneuve-sur-Yonne.',
     },
+  },
+  carpooling: {
+    title: {
+      fr: 'Covoiturage',
+      es: 'Carpooling',
+      en: 'Carpooling',
+    },
+    text: {
+      fr: 'Vous proposez ou cherchez un trajet ? Inscrivez-vous sur notre feuille de covoiturage partagée.',
+      es: '¿Ofrecen o buscan un viaje? Inscríbanse en nuestra hoja de carpooling compartida.',
+      en: 'Offering or looking for a ride? Sign up on our shared carpooling sheet.',
+    },
+    buttonLabel: {
+      fr: 'Voir la feuille de covoiturage',
+      es: 'Ver la hoja de carpooling',
+      en: 'View the carpooling sheet',
+    },
+    buttonUrl:
+      'https://docs.google.com/spreadsheets/d/1iRLYBOoClAmuXdrqNgxUCodsKDaemEmBOv3tPOqT4aM/edit?usp=sharing',
   },
   mapUrl: 'https://maps.app.goo.gl/sx6hDY5QsLikCHGM6',
 };
@@ -198,18 +217,18 @@ export const programme = {
         en: 'Cocktail reception',
       },
       description: {
-        fr: 'Cocktail dans les jardins du château',
-        es: 'Cóctel en los jardines del castillo',
-        en: 'Cocktails in the château gardens',
+        fr: 'Cocktail dans les jardins du domaine',
+        es: 'Cóctel en los jardines del dominio',
+        en: 'Cocktails in the domain gardens',
       },
     },
     {
       time: '20:00',
       title: { fr: 'Dîner', es: 'Cena', en: 'Dinner' },
       description: {
-        fr: 'Dîner assis dans la grande salle du château',
-        es: 'Cena sentada en el gran salón del castillo',
-        en: "Seated dinner in the château's grand hall",
+        fr: 'Dîner assis',
+        es: 'Cena sentados',
+        en: 'Seated dinner',
       },
     },
     {
@@ -225,9 +244,9 @@ export const programme = {
       time: '11:00',
       title: { fr: 'Brunch', es: 'Brunch', en: 'Brunch' },
       description: {
-        fr: 'Brunch du lendemain au château – dimanche matin',
-        es: 'Brunch del día siguiente en el castillo – domingo por la mañana',
-        en: 'Next-day brunch at the château — Sunday morning',
+        fr: 'Brunch du lendemain au domaine – dimanche matin',
+        es: 'Brunch del día siguiente en el dominio – domingo por la mañana',
+        en: 'Next-day brunch at the domain — Sunday morning',
       },
     },
   ],
@@ -264,7 +283,7 @@ export const giftList = {
     es: 'Ver la lista',
     en: 'View the registry',
   },
-  buttonUrl: 'https://www.millemercismariage.com',
+  buttonUrl: 'https://www.millemercismariage.com/alicegaston/liste.html',
   alternativeText: {
     fr: 'Si vous préférez contribuer autrement, une urne sera également à disposition le jour J.',
     es: 'Si prefieren contribuir de otra manera, habrá también una urna disponible el día de la boda.',

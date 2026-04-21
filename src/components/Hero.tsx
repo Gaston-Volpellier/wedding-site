@@ -1,10 +1,66 @@
 'use client';
 
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useLocale, t } from '@/lib/i18n';
 import { hero } from '@/lib/content';
 
+const DESKTOP_CANDIDATES = [
+  '/images/hero_1.jpeg',
+  '/images/hero_2.jpeg',
+  '/images/hero_3.jpeg',
+  '/images/hero_4.jpeg',
+];
+
+const MOBILE_CANDIDATES = [
+  '/images/hero_mobile_1.jpeg',
+  '/images/hero_mobile_2.jpeg',
+  '/images/hero_mobile_3.jpeg',
+  '/images/hero_mobile_4.jpeg',
+];
+
+const INTERVAL_MS = 4000;
+
+function probeImages(urls: string[]): Promise<string[]> {
+  return Promise.all(
+    urls.map(
+      (url) =>
+        new Promise<string | null>((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve(url);
+          img.onerror = () => resolve(null);
+          img.src = url;
+        }),
+    ),
+  ).then((results) => results.filter((url): url is string => url !== null));
+}
+
 export default function Hero() {
   const { locale } = useLocale();
+  const [desktopImages, setDesktopImages] = useState<string[]>([]);
+  const [mobileImages, setMobileImages] = useState<string[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const maxLength = useRef(1);
+
+  useEffect(() => {
+    Promise.all([
+      probeImages(DESKTOP_CANDIDATES),
+      probeImages(MOBILE_CANDIDATES),
+    ]).then(([desktop, mobile]) => {
+      setDesktopImages(desktop);
+      setMobileImages(mobile);
+      maxLength.current = Math.max(desktop.length, mobile.length, 1);
+    });
+  }, []);
+
+  const advance = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % maxLength.current);
+  }, []);
+
+  useEffect(() => {
+    if (maxLength.current <= 1) return;
+    const id = setInterval(advance, INTERVAL_MS);
+    return () => clearInterval(id);
+  }, [advance, desktopImages, mobileImages]);
 
   const scrollToProgramme = () => {
     document
@@ -14,22 +70,36 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image placeholder */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/20 to-charcoal/40 z-10" />
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
-        style={{
-          backgroundImage: "url('/images/hero_mobile.jpeg')",
-          backgroundColor: '#8b7d6b',
-        }}
-      />
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
-        style={{
-          backgroundImage: "url('/images/hero.jpeg')",
-          backgroundColor: '#8b7d6b',
-        }}
-      />
+
+      {/* Desktop slides */}
+      {desktopImages.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 hidden md:block bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out"
+          style={{
+            backgroundImage: `url('${src}')`,
+            backgroundColor: '#8b7d6b',
+            opacity: i === activeIndex % desktopImages.length ? 1 : 0,
+          }}
+          aria-hidden={i !== activeIndex % desktopImages.length}
+        />
+      ))}
+
+      {/* Mobile slides */}
+      {mobileImages.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 md:hidden bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out"
+          style={{
+            backgroundImage: `url('${src}')`,
+            backgroundColor: '#8b7d6b',
+            opacity: i === activeIndex % mobileImages.length ? 1 : 0,
+          }}
+          aria-hidden={i !== activeIndex % mobileImages.length}
+        />
+      ))}
 
       {/* Content */}
       <div className="relative z-20 text-center text-white px-6 max-w-3xl mx-auto">

@@ -61,6 +61,33 @@ export default function GettingThere() {
           </p>
         </RevealOnScroll>
 
+        {/* Carpooling */}
+        <RevealOnScroll>
+          <div className="bg-cream/60 p-8 md:p-12 text-center max-w-2xl mx-auto mb-10">
+            <div className="text-taupe mx-auto mb-4 flex justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+                <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2" />
+                <circle cx="6.5" cy="16.5" r="2.5" />
+                <circle cx="16.5" cy="16.5" r="2.5" />
+              </svg>
+            </div>
+            <h3 className="font-serif text-2xl mb-4 text-charcoal">
+              {t(gettingThere.carpooling.title, locale)}
+            </h3>
+            <p className="text-sm text-charcoal-light/80 leading-relaxed font-sans mb-6">
+              {t(gettingThere.carpooling.text, locale)}
+            </p>
+            <a
+              href={gettingThere.carpooling.buttonUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-charcoal/40 text-charcoal px-8 py-3 text-sm tracking-widest uppercase font-sans hover:bg-charcoal hover:text-white transition-colors duration-300"
+            >
+              {t(gettingThere.carpooling.buttonLabel, locale)}
+            </a>
+          </div>
+        </RevealOnScroll>
+
         {/* Accommodation */}
         <RevealOnScroll>
           <div className="bg-cream/60 p-8 md:p-12 text-center max-w-2xl mx-auto">
