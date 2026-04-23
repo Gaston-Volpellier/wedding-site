@@ -88,18 +88,6 @@ export default function GettingThere() {
           </div>
         </RevealOnScroll>
 
-        {/* Accommodation */}
-        <RevealOnScroll>
-          <div className="bg-cream/60 p-8 md:p-12 text-center max-w-2xl mx-auto">
-            <h3 className="font-serif text-2xl mb-4 text-charcoal">
-              {t(gettingThere.accommodation.title, locale)}
-            </h3>
-            <p className="text-sm text-charcoal-light/80 leading-relaxed font-sans">
-              {t(gettingThere.accommodation.text, locale)}
-            </p>
-          </div>
-        </RevealOnScroll>
-
         {/* Map link */}
         <RevealOnScroll>
           <div className="text-center mt-12">

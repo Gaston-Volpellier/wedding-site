@@ -1,10 +1,5 @@
 import type { Locale } from './i18n';
 
-/* ──────────────────────────────────────────────
-   All editable content lives here.
-   Replace text, dates, and URLs to personalise.
-   ────────────────────────────────────────────── */
-
 // ─── Navigation ──────────────────────────────
 export const nav: Record<Locale, { label: string; href: string }[]> = {
   fr: [
@@ -141,18 +136,6 @@ export const gettingThere = {
     es: 'Hay un estacionamiento gratuito disponible en el dominio.',
     en: 'Free parking is available at the domain.',
   },
-  accommodation: {
-    title: {
-      fr: 'Hébergement',
-      es: 'Alojamiento',
-      en: 'Accommodation',
-    },
-    text: {
-      fr: 'Nous recommandons également les hôtels et gîtes à proximité de Sens et Villeneuve-sur-Yonne.',
-      es: 'También recomendamos hoteles y casas rurales cerca de Sens y Villeneuve-sur-Yonne.',
-      en: 'We recommend hotels and guesthouses near Sens and Villeneuve-sur-Yonne.',
-    },
-  },
   carpooling: {
     title: {
       fr: 'Covoiturage',
@@ -274,9 +257,9 @@ export const giftList = {
     en: 'Gift list',
   },
   text: {
-    fr: 'Votre présence est le plus beau des cadeaux. Si toutefois vous souhaitez nous gâter, nous avons préparé une liste de mariage en ligne.',
-    es: 'Su presencia es el mejor regalo. Sin embargo, si desean hacernos un obsequio, hemos preparado una lista de bodas en línea.',
-    en: 'Your presence is the greatest gift of all. However, if you would like to spoil us, we have prepared an online gift registry.',
+    fr: 'Votre présence est le plus beau des cadeaux, il n’est pas nécessaire de nous offrir autre chose. Si toutefois vous souhaitez nous gâter, nous avons préparé une liste de mariage en ligne.',
+    es: 'Su presencia es el mejor regalo, no es necesario que nos den nada más. Sin embargo, si desean hacernos un obsequio, hemos preparado una lista de bodas en línea.',
+    en: 'Your presence is the greatest gift of all, no need to give us anything more. However, if you would like to spoil us, we have prepared an online gift registry.',
   },
   buttonLabel: {
     fr: 'Voir la liste',
@@ -338,9 +321,9 @@ export const faq = {
         en: 'Who should I contact with questions?',
       },
       answer: {
-        fr: "N'hésitez pas à nous écrire à mariagegastonalice@gmail.com ou à contacter nos témoins.",
-        es: 'No duden en escribirnos a mariagegastonalice@gmail.com o en contactar a nuestros testigos.',
-        en: 'Feel free to write to us at mariagegastonalice@gmail.com or reach out to our best man / maid of honour.',
+        fr: "N'hésitez pas à nous écrire à mariagegastonalice@gmail.com ou par whatsapp: Gastón REDACTED, Alice REDACTED.",
+        es: 'No duden en escribirnos a mariagegastonalice@gmail.com o por whatsapp: Gastón REDACTED, Alice REDACTED.',
+        en: 'Feel free to write to us at mariagegastonalice@gmail.com or by whatsapp: Gaston REDACTED, Alice REDACTED.',
       },
     },
   ],
