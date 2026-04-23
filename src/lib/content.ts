@@ -321,9 +321,9 @@ export const faq = {
         en: 'Who should I contact with questions?',
       },
       answer: {
-        fr: "N'hésitez pas à nous écrire à mariagegastonalice@gmail.com ou par whatsapp: Gastón REDACTED, Alice REDACTED.",
-        es: 'No duden en escribirnos a mariagegastonalice@gmail.com o por whatsapp: Gastón REDACTED, Alice REDACTED.',
-        en: 'Feel free to write to us at mariagegastonalice@gmail.com or by whatsapp: Gaston REDACTED, Alice REDACTED.',
+        fr: "N'hésitez pas à nous écrire à mariagegastonalice@gmail.com.",
+        es: 'No duden en escribirnos a mariagegastonalice@gmail.com.',
+        en: 'Feel free to write to us at mariagegastonalice@gmail.com.',
       },
     },
   ],
