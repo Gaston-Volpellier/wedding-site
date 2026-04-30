@@ -1,19 +1,23 @@
-"use client";
+'use client';
 
-import { useLocale, t } from "@/lib/i18n";
-import { practicalInfo } from "@/lib/content";
-import SectionHeading from "./SectionHeading";
-import RevealOnScroll from "./RevealOnScroll";
+import { useLocale, t } from '@/lib/i18n';
+import { practicalInfo } from '@/lib/content';
+import SectionHeading from './SectionHeading';
+import RevealOnScroll from './RevealOnScroll';
 
 function InfoCard({
   label,
   value,
   address,
+  mapsUrl,
+  mapsLabel,
   delay = 0,
 }: {
   label: string;
   value: string;
   address?: string;
+  mapsUrl?: string;
+  mapsLabel?: string;
   delay?: number;
 }) {
   return (
@@ -27,6 +31,27 @@ function InfoCard({
         </p>
         {address && (
           <p className="text-sm text-charcoal-light/70 font-sans">{address}</p>
+        )}
+        {mapsUrl && mapsLabel && (
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex mt-3 items-center gap-2 text-sm tracking-widest uppercase font-sans text-taupe-dark hover:text-charcoal transition-colors duration-300 border-b border-taupe/40 pb-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="w-4 h-4"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            {mapsLabel}
+          </a>
         )}
       </div>
     </RevealOnScroll>
@@ -51,12 +76,16 @@ export default function PracticalInfo() {
             label={t(practicalInfo.ceremony.label, locale)}
             value={t(practicalInfo.ceremony.value, locale)}
             address={practicalInfo.ceremony.address}
+            mapsUrl={practicalInfo.ceremony.mapsUrl}
+            mapsLabel={t(practicalInfo.mapsLinkLabel, locale)}
             delay={100}
           />
           <InfoCard
             label={t(practicalInfo.reception.label, locale)}
             value={t(practicalInfo.reception.value, locale)}
             address={practicalInfo.reception.address}
+            mapsUrl={practicalInfo.reception.mapsUrl}
+            mapsLabel={t(practicalInfo.mapsLinkLabel, locale)}
             delay={200}
           />
         </div>
@@ -76,12 +105,6 @@ export default function PracticalInfo() {
               className="w-full h-full"
             />
           </div>
-        </RevealOnScroll>
-
-        <RevealOnScroll>
-          <p className="text-center text-charcoal-light/80 font-sans text-sm md:text-base max-w-2xl mx-auto">
-            {t(practicalInfo.travelNote, locale)}
-          </p>
         </RevealOnScroll>
       </div>
     </section>

@@ -32,9 +32,9 @@ export const nav: Record<Locale, { label: string; href: string }[]> = {
 export const hero = {
   names: 'Alice & Gaston',
   date: {
-    fr: '26 septembre 2026',
-    es: '26 de septiembre de 2026',
-    en: 'September 26, 2026',
+    fr: '25, 26 et 27 septembre 2026',
+    es: '25, 26 y 27 de septiembre de 2026',
+    en: 'September 25, 26 and 27, 2026',
   },
   location: {
     fr: 'Domaine du Bijoutier, Drôme',
@@ -43,7 +43,7 @@ export const hero = {
   },
   subtitle: {
     fr: 'Nous avons hâte de célébrer ce jour avec vous',
-    es: 'Estamos deseando celebrar este día con ustedes',
+    es: 'Queremos celebrar este día con ustedes',
     en: 'We cannot wait to celebrate this day with you',
   },
   cta: {
@@ -63,9 +63,9 @@ export const practicalInfo = {
   date: {
     label: { fr: 'Date', es: 'Fecha', en: 'Date' },
     value: {
-      fr: 'Samedi 26 septembre 2026',
-      es: 'Sábado 26 de septiembre de 2026',
-      en: 'Saturday, September 26, 2026',
+      fr: '25 au 27 septembre 2026',
+      es: '25 a 27 de septiembre de 2026',
+      en: 'September 25 to 27, 2026',
     },
   },
   ceremony: {
@@ -76,6 +76,10 @@ export const practicalInfo = {
       en: 'Cathedral of Notre-Dame de Saint-Paul-Trois-Châteaux',
     },
     address: 'Rue de Mgr Sibour, 26130 Saint-Paul-Trois-Châteaux',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.916227304622!2d4.8994071759475695!3d44.43488060152543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b57bbd8acc02e1%3A0x89021ec77555c2f9!2sCath%C3%A9drale%20Notre-Dame%20de%20Saint-Paul-Trois-Ch%C3%A2teaux!5e0!3m2!1sen!2sfr!4v1775210755252!5m2!1sen!2sfr',
+    mapsUrl:
+      'https://www.google.com/maps/search/?api=1&query=Cath%C3%A9drale%20Notre-Dame%20de%20Saint-Paul-Trois-Ch%C3%A2teaux%20Rue%20de%20Mgr%20Sibour%2026130%20Saint-Paul-Trois-Ch%C3%A2teaux',
   },
   reception: {
     label: { fr: 'Réception', es: 'Recepción', en: 'Reception' },
@@ -84,15 +88,19 @@ export const practicalInfo = {
       es: 'Domaine du Bijoutier',
       en: 'Domaine du Bijoutier',
     },
-    address: 'Chemin du Bijoutier, 26130 Saint-Paul-Trois-Châteaux, France',
+    address: '525 route de Bayonne, 26230 Grignan',
+    mapEmbedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.916227304622!2d4.8994071759475695!3d44.43488060152543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b57bbd8acc02e1%3A0x89021ec77555c2f9!2sCath%C3%A9drale%20Notre-Dame%20de%20Saint-Paul-Trois-Ch%C3%A2teaux!5e0!3m2!1sen!2sfr!4v1775210755252!5m2!1sen!2sfr',
+    mapsUrl:
+      'https://www.google.com/maps/search/?api=1&query=Domaine%20du%20Bijoutier%20Chemin%20du%20Bijoutier%2026130%20Saint-Paul-Trois-Ch%C3%A2teaux%20France',
+  },
+  mapsLinkLabel: {
+    fr: 'Voir sur Google Maps',
+    es: 'Ver en Google Maps',
+    en: 'View on Google Maps',
   },
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.916227304622!2d4.8994071759475695!3d44.43488060152543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b57bbd8acc02e1%3A0x89021ec77555c2f9!2sDomaine%20du%20Bijoutier%20-%20Mariages!5e0!3m2!1sen!2sfr!4v1775210755252!5m2!1sen!2sfr',
-  travelNote: {
-    fr: "Le domaine se trouve à 1h30 de route des gares d'Avignon ou de Valence.",
-    es: 'El dominio està a 1h30 de auto de las estaciones de tren de Avignon o Valence.',
-    en: 'The estate is a 1.5-hour drive from the train stations in Avignon or Valence.',
-  },
 };
 
 // ─── Getting there ───────────────────────────
@@ -143,9 +151,9 @@ export const gettingThere = {
       en: 'Carpooling',
     },
     text: {
-      fr: 'Vous proposez ou cherchez un trajet ? Inscrivez-vous sur notre feuille de covoiturage partagée.',
-      es: '¿Ofrecen o buscan un viaje? Inscríbanse en nuestra hoja de carpooling compartida.',
-      en: 'Offering or looking for a ride? Sign up on our shared carpooling sheet.',
+      fr: 'Vous proposez ou cherchez un trajet en auto ? Inscrivez-vous sur notre feuille de covoiturage partagée.',
+      es: '¿Ofrecen o buscan un viaje en auto? Inscríbanse en nuestra hoja de carpooling compartida.',
+      en: 'Offering or looking for a car ride? Sign up on our shared carpooling sheet.',
     },
     buttonLabel: {
       fr: 'Voir la feuille de covoiturage',
@@ -161,76 +169,123 @@ export const gettingThere = {
 // ─── Programme / Timeline ────────────────────
 export const programme = {
   title: {
-    fr: 'Programme de la journée',
-    es: 'Programa del día',
-    en: 'The wedding day',
+    fr: 'Programme',
+    es: 'Programa',
+    en: 'Schedule',
   },
-  events: [
+  days: [
     {
-      time: '14:30',
-      title: {
-        fr: 'Accueil des invités',
-        es: 'Recepción de invitados',
-        en: 'Guest arrival',
+      label: { fr: 'Vendredi', es: 'Viernes', en: 'Friday' },
+      date: {
+        fr: '25 septembre',
+        es: '25 de septiembre',
+        en: 'September 25',
       },
-      description: {
-        fr: 'Rendez-vous à la Cathédrale Notre-Dame de Saint-Paul-Trois-Châteaux',
-        es: 'Encuentro en la Catedral Notre-Dame de Saint-Paul-Trois-Châteaux',
-        en: 'Meet at the Cathedral of Notre-Dame de Saint-Paul-Trois-Châteaux',
-      },
+      events: [
+        {
+          time: '15:00',
+          title: { fr: 'Arrivée', es: 'Llegada', en: 'Arrival' },
+          description: {
+            fr: 'Arrivée à partir de 15h (pour ceux qui dorment sur place)',
+            es: 'Llegada a partir de las 15h (para los que duerman en el lugar)',
+            en: 'Arrival from 3pm (for those staying overnight)',
+          },
+        },
+        {
+          time: '20:00',
+          title: {
+            fr: 'Empanadas night',
+            es: 'Empanadas night',
+            en: 'Empanadas night',
+          },
+        },
+      ],
     },
     {
-      time: '15:00',
-      title: {
-        fr: 'Cérémonie',
-        es: 'Ceremonia',
-        en: 'Ceremony',
+      label: { fr: 'Samedi', es: 'Sábado', en: 'Saturday' },
+      date: {
+        fr: '26 septembre',
+        es: '26 de septiembre',
+        en: 'September 26',
       },
-      description: {
-        fr: 'Cérémonie religieuse',
-        es: 'Ceremonia religiosa',
-        en: 'Religious ceremony',
-      },
+      events: [
+        {
+          time: '14:30',
+          title: {
+            fr: 'Accueil des invités',
+            es: 'Recepción de invitados',
+            en: 'Guest arrival',
+          },
+          description: {
+            fr: 'Rendez-vous à la Cathédrale Notre-Dame de Saint-Paul-Trois-Châteaux',
+            es: 'Encuentro en la Catedral Notre-Dame de Saint-Paul-Trois-Châteaux',
+            en: 'Meet at the Cathedral of Notre-Dame de Saint-Paul-Trois-Châteaux',
+          },
+        },
+        {
+          time: '14:50',
+          title: { fr: 'Cérémonie', es: 'Ceremonia', en: 'Ceremony' },
+          description: {
+            fr: 'Cérémonie religieuse',
+            es: 'Ceremonia religiosa',
+            en: 'Religious ceremony',
+          },
+        },
+        {
+          time: '17:45',
+          title: {
+            fr: "Vin d'honneur",
+            es: 'Cóctel de honor',
+            en: 'Cocktail reception',
+          },
+          description: {
+            fr: 'Cocktail dans les jardins du domaine',
+            es: 'Cóctel en los jardines del dominio',
+            en: 'Cocktails in the domain gardens',
+          },
+        },
+        {
+          time: '20:00',
+          title: { fr: 'Dîner', es: 'Cena', en: 'Dinner' },
+          description: {
+            fr: 'Dîner assis',
+            es: 'Cena sentados',
+            en: 'Seated dinner',
+          },
+        },
+        {
+          time: '23:00',
+          title: { fr: 'Soirée dansante', es: 'Fiesta', en: 'Party' },
+          description: {
+            fr: "Musique et danse jusqu'au bout de la nuit",
+            es: 'Música y baile hasta el fin de la noche',
+            en: 'Music and dancing until the end of the night',
+          },
+        },
+      ],
     },
     {
-      time: '16:30',
-      title: {
-        fr: "Vin d'honneur",
-        es: 'Cóctel de honor',
-        en: 'Cocktail reception',
+      label: { fr: 'Dimanche', es: 'Domingo', en: 'Sunday' },
+      date: {
+        fr: '27 septembre',
+        es: '27 de septiembre',
+        en: 'September 27',
       },
-      description: {
-        fr: 'Cocktail dans les jardins du domaine',
-        es: 'Cóctel en los jardines del dominio',
-        en: 'Cocktails in the domain gardens',
-      },
-    },
-    {
-      time: '20:00',
-      title: { fr: 'Dîner', es: 'Cena', en: 'Dinner' },
-      description: {
-        fr: 'Dîner assis',
-        es: 'Cena sentados',
-        en: 'Seated dinner',
-      },
-    },
-    {
-      time: '23:00',
-      title: { fr: 'Soirée dansante', es: 'Fiesta', en: 'Party' },
-      description: {
-        fr: "Musique et danse jusqu'au bout de la nuit",
-        es: 'Música y baile hasta el amanecer',
-        en: 'Music and dancing until the early hours',
-      },
-    },
-    {
-      time: '11:00',
-      title: { fr: 'Brunch', es: 'Brunch', en: 'Brunch' },
-      description: {
-        fr: 'Brunch du lendemain au domaine – dimanche matin',
-        es: 'Brunch del día siguiente en el dominio – domingo por la mañana',
-        en: 'Next-day brunch at the domain — Sunday morning',
-      },
+      events: [
+        {
+          time: '11:00',
+          title: { fr: 'Brunch', es: 'Brunch', en: 'Brunch' },
+          description: {
+            fr: 'Brunch au domaine',
+            es: 'Brunch en el dominio',
+            en: 'Brunch at the domain',
+          },
+        },
+        {
+          time: '17:30',
+          title: { fr: 'Départ', es: 'Despedida', en: 'Departure' },
+        },
+      ],
     },
   ],
 };
@@ -243,9 +298,9 @@ export const dressCode = {
     en: 'Dress code',
   },
   text: {
-    fr: "Tenue de cocktail élégante. Nous vous invitons à privilégier des tons doux et naturels — pensez beige, terracotta, sauge, bleu poudré. Merci d'éviter le blanc, réservé à la mariée.",
-    es: 'Traje de cóctel elegante. Los invitamos a privilegiar tonos suaves y naturales — piensen en beige, terracota, salvia, azul empolvado. Por favor, eviten el blanco, reservado para la novia.',
-    en: 'Elegant cocktail attire. We encourage soft, natural tones — think beige, terracotta, sage, powder blue. Please avoid white, reserved for the bride.',
+    fr: 'Tenue de cocktail élégante : robes longues, sans robes blanches ni noires. Toutes les autres couleurs sont les bienvenues. Pour les hommes : costume, cravate facultative. La palette de couleurs du mariage est donnée à titre indicatif, sans obligation. Pour les chaussures, veuillez noter que le sol de l’espace cocktail est composé de petits cailloux, nous vous recommandons donc d’éviter les talons trop fins.',
+    es: 'Traje de cóctel elegante: vestidos largos, sin vestidos blancos ni negros. Todos los demás colores son bienvenidos. Para los hombres: traje, corbata opcional. La paleta de colores de la boda es solo una guía, sin obligación. Para el calzado tengan en cuenta que el piso del lugar donde sera el cocktail tiene pequeñas piedras, por lo que recomendamos no usar tacos muy finos.',
+    en: 'Elegant cocktail attire: long dresses, no white or black dresses. All other colors are welcome. For men: suits, with ties optional. The wedding color palette is just a guide, not a requirement. For shoes please note that the floor of the place where the cocktail will be has small stones, so we recommend not using very thin heels.',
   },
 };
 
@@ -267,11 +322,6 @@ export const giftList = {
     en: 'View the registry',
   },
   buttonUrl: 'https://www.millemercismariage.com/alicegaston/liste.html',
-  alternativeText: {
-    fr: 'Si vous préférez contribuer autrement, une urne sera également à disposition le jour J.',
-    es: 'Si prefieren contribuir de otra manera, habrá también una urna disponible el día de la boda.',
-    en: 'If you prefer to contribute differently, a card box will also be available on the day.',
-  },
 };
 
 // ─── FAQ ─────────────────────────────────────
@@ -285,9 +335,9 @@ export const faq = {
         en: 'What time should I arrive?',
       },
       answer: {
-        fr: "Nous vous attendons à l'église à partir de 14h30 pour une cérémonie à 15h.",
-        es: 'Los esperamos en la iglesia a partir de las 14:30 para una ceremonia a las 15:00.',
-        en: 'We expect guests at the church from 2:30 PM for a 3:00 PM ceremony.',
+        fr: "Nous vous attendons à l'église à partir de 14h30 pour une cérémonie à 14h50.",
+        es: 'Los esperamos en la iglesia a partir de las 14:30 para una ceremonia a las 14:50.',
+        en: 'We expect guests at the church from 2:30 PM for a 2:50 PM ceremony.',
       },
     },
     {
@@ -297,9 +347,9 @@ export const faq = {
         en: 'Is there parking?',
       },
       answer: {
-        fr: 'Oui, un parking gratuit est disponible.',
-        es: 'Sí, hay un estacionamiento gratuito disponible.',
-        en: 'Yes, free parking is available.',
+        fr: 'La cathédrale de la cérémonie se trouve en centre-ville, donc le stationnement peut être un peu plus compliqué. En revanche, au domaine, il y a un parking gratuit disponible.',
+        es: 'La Catedral de la ceremoña queda en el centro de una ciudad por lo que estacionar puede ser un poco mas complicado. Pero en el dominio sí, hay un estacionamiento gratuito disponible.',
+        en: 'The cathedral of the ceremony is in the center of a city, so parking can be a little more complicated. But at the domain, free parking is available.',
       },
     },
     {
@@ -309,9 +359,21 @@ export const faq = {
         en: 'Where can we stay?',
       },
       answer: {
-        fr: 'ASDASDASDASDDS',
-        es: 'ASDASDASDASDDS',
-        en: 'ASDASDASDASDDS',
+        fr: 'Il y a plusieurs hôtels à Grignan et dans les environs, voici une liste avec quelques options : https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA. Nous vous recommandons aussi Airbnb, il y a quelques options avec des gîtes pour plusieurs personnes à moins de 10 minutes en voiture du domaine.',
+        es: 'Hay varios hoteles en Grignan y sus alrededores, aca hay una lista con algunos de ellos: https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA. Tambien les recomendamos Airbnb, hay algunas opciones con cabañas para muchas personas a menos de 10 minutos de auto del dominio.',
+        en: 'There are several hotels in Grignan and its surroundings, here is a list with some of them: https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA. We also recommend Airbnb, there are some options with cabins for many people within 10 minutes of auto from the domain.',
+      },
+    },
+    {
+      question: {
+        fr: 'Pouvons-nous prendre des photos avec nos téléphones ?',
+        es: '¿Podemos tomar fotos con nuestros celulares?',
+        en: 'Can we take photos with our phones?',
+      },
+      answer: {
+        fr: "Oui, avec plaisir, mais s'il vous plaît, pas pendant la cérémonie. Il y aura un photographe professionnel qui prendra les moments les plus importants.",
+        es: '¡Si! con mucho gusto, pero por favor no durante la ceremonia. Habrá un fotografo profesional tomará los momentos mas importantes.',
+        en: 'Yes! with pleasure, but please no during the ceremony. There will be a professional photographer taking the most important moments.',
       },
     },
     {

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useLocale, t } from "@/lib/i18n";
-import { giftList } from "@/lib/content";
-import SectionHeading from "./SectionHeading";
-import RevealOnScroll from "./RevealOnScroll";
+import { useLocale, t } from '@/lib/i18n';
+import { giftList } from '@/lib/content';
+import SectionHeading from './SectionHeading';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function GiftList() {
   const { locale } = useLocale();
@@ -28,12 +28,6 @@ export default function GiftList() {
           >
             {t(giftList.buttonLabel, locale)}
           </a>
-        </RevealOnScroll>
-
-        <RevealOnScroll delay={200}>
-          <p className="mt-10 text-sm text-charcoal-light/60 font-sans italic">
-            {t(giftList.alternativeText, locale)}
-          </p>
         </RevealOnScroll>
       </div>
     </section>
