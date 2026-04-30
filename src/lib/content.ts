@@ -313,7 +313,7 @@ export const giftList = {
   },
   text: {
     fr: 'Votre présence est le plus beau des cadeaux, il n’est pas nécessaire de nous offrir autre chose. Si toutefois vous souhaitez nous gâter, nous avons préparé une liste de mariage en ligne.',
-    es: 'Su presencia es el mejor regalo, no es necesario que nos den nada más. Sin embargo, si desean hacernos un obsequio, hemos preparado una lista de bodas en línea.',
+    es: 'Su presencia es el mejor regalo, no es necesario que nos den nada más. Aún así, si quieren hacernos un regalo, hemos preparado una lista de bodas en línea.',
     en: 'Your presence is the greatest gift of all, no need to give us anything more. However, if you would like to spoil us, we have prepared an online gift registry.',
   },
   buttonLabel: {
@@ -348,7 +348,7 @@ export const faq = {
       },
       answer: {
         fr: 'La cathédrale de la cérémonie se trouve en centre-ville, donc le stationnement peut être un peu plus compliqué. En revanche, au domaine, il y a un parking gratuit disponible.',
-        es: 'La Catedral de la ceremoña queda en el centro de una ciudad por lo que estacionar puede ser un poco mas complicado. Pero en el dominio sí, hay un estacionamiento gratuito disponible.',
+        es: 'La Catedral de la ceremonia queda en el centro de una ciudad por lo que estacionar puede ser un poco mas complicado. Pero en el dominio, hay un estacionamiento gratuito disponible.',
         en: 'The cathedral of the ceremony is in the center of a city, so parking can be a little more complicated. But at the domain, free parking is available.',
       },
     },
@@ -359,9 +359,15 @@ export const faq = {
         en: 'Where can we stay?',
       },
       answer: {
-        fr: 'Il y a plusieurs hôtels à Grignan et dans les environs, voici une liste avec quelques options : https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA. Nous vous recommandons aussi Airbnb, il y a quelques options avec des gîtes pour plusieurs personnes à moins de 10 minutes en voiture du domaine.',
-        es: 'Hay varios hoteles en Grignan y sus alrededores, aca hay una lista con algunos de ellos: https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA. Tambien les recomendamos Airbnb, hay algunas opciones con cabañas para muchas personas a menos de 10 minutos de auto del dominio.',
-        en: 'There are several hotels in Grignan and its surroundings, here is a list with some of them: https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA. We also recommend Airbnb, there are some options with cabins for many people within 10 minutes of auto from the domain.',
+        fr: 'Il y a plusieurs hôtels à Grignan et dans les environs, nous vous laissons une liste avec quelques options. Nous vous recommandons aussi Airbnb, il y a quelques options avec des gîtes pour plusieurs personnes à moins de 10 minutes en voiture du domaine.',
+        es: 'Hay varios hoteles en Grignan y sus alrededores, les dejamos una lista con algunos de ellos. Tambien les recomendamos Airbnb, hay algunas opciones con cabañas para muchas personas a menos de 10 minutos de auto del dominio.',
+        en: 'There are several hotels in Grignan and its surroundings, we leave you here a list with some of them. We also recommend Airbnb, there are some options with cabins for many people within 10 minutes of auto from the domain.',
+      },
+      link: 'https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA',
+      linkLabel: {
+        fr: 'Voir la liste',
+        es: 'Ver la lista',
+        en: 'See the list',
       },
     },
     {
@@ -371,9 +377,9 @@ export const faq = {
         en: 'Can we take photos with our phones?',
       },
       answer: {
-        fr: "Oui, avec plaisir, mais s'il vous plaît, pas pendant la cérémonie. Il y aura un photographe professionnel qui prendra les moments les plus importants.",
-        es: '¡Si! con mucho gusto, pero por favor no durante la ceremonia. Habrá un fotografo profesional tomará los momentos mas importantes.',
-        en: 'Yes! with pleasure, but please no during the ceremony. There will be a professional photographer taking the most important moments.',
+        fr: "Oui, avec plaisir, mais s'il vous plaît, pas pendant la cérémonie. Il y aura un photographe professionnel qui prendra les moments les plus importants, pour que vous puissiez profiter pleinement.",
+        es: '¡Si! con mucho gusto, pero por favor no durante la ceremonia. Habrá un fotografo profesional tomará los momentos mas importantes, para que ustedes puedan disfrutar a pleno.',
+        en: 'Yes! with pleasure, but please no during the ceremony. There will be a professional photographer taking the most important moments, so you can enjoy to the fullest.',
       },
     },
     {
