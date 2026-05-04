@@ -1,16 +1,15 @@
-"use client";
+'use client';
 
-import { useLocale, t } from "@/lib/i18n";
-import { dressCode } from "@/lib/content";
-import SectionHeading from "./SectionHeading";
-import RevealOnScroll from "./RevealOnScroll";
+import { useLocale, t } from '@/lib/i18n';
+import { dressCode } from '@/lib/content';
+import SectionHeading from './SectionHeading';
+import RevealOnScroll from './RevealOnScroll';
 
 const swatches = [
-  { name: "Beige", color: "#d4c5a9" },
-  { name: "Terracotta", color: "#c68b6e" },
-  { name: "Sage", color: "#a3b18a" },
-  { name: "Powder blue", color: "#b8ccd8" },
-  { name: "Mauve", color: "#c4a6b5" },
+  { name: 'Soft Blush Pink', color: '#F8C8C4' },
+  { name: 'Warm Peach', color: '#FFB07C' },
+  { name: 'Dusty Mauve', color: '#D8A0A8' },
+  { name: 'Fresh Sage Green', color: '#B8C4A0' },
 ];
 
 export default function DressCode() {
