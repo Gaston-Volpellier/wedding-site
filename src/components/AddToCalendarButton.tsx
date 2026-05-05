@@ -8,9 +8,9 @@ type Variant = 'inline' | 'button';
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   inline:
-    'inline-flex items-center gap-2 text-sm tracking-widest uppercase font-sans text-taupe-dark hover:text-charcoal transition-colors duration-300 border-b border-taupe/40 pb-1',
+    'inline-flex items-center justify-center gap-2 text-sm tracking-widest uppercase font-sans text-taupe-dark hover:text-charcoal transition-colors duration-300 border-b border-taupe/40 pb-1 text-center',
   button:
-    'inline-flex items-center gap-3 border border-charcoal/40 text-charcoal px-8 py-3 text-sm tracking-widest uppercase font-sans hover:bg-charcoal hover:text-cream transition-colors duration-300',
+    'inline-flex items-center justify-center gap-3 border border-charcoal/40 text-charcoal px-8 py-3 text-sm tracking-widest uppercase font-sans hover:bg-charcoal hover:text-cream transition-colors duration-300 text-center',
 };
 
 export default function AddToCalendarButton({
