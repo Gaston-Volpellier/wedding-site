@@ -4,6 +4,7 @@ import { useLocale, t } from '@/lib/i18n';
 import { programme } from '@/lib/content';
 import SectionHeading from './SectionHeading';
 import RevealOnScroll from './RevealOnScroll';
+import AddToCalendarButton from './AddToCalendarButton';
 
 export default function Timeline() {
   const { locale } = useLocale();
@@ -124,6 +125,12 @@ export default function Timeline() {
             </div>
           ))}
         </div>
+
+        <RevealOnScroll>
+          <div className="flex justify-center mt-16 md:mt-20">
+            <AddToCalendarButton variant="button" />
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

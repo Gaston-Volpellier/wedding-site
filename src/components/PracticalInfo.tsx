@@ -4,6 +4,7 @@ import { useLocale, t } from '@/lib/i18n';
 import { practicalInfo } from '@/lib/content';
 import SectionHeading from './SectionHeading';
 import RevealOnScroll from './RevealOnScroll';
+import AddToCalendarButton from './AddToCalendarButton';
 
 function InfoCard({
   label,
@@ -11,6 +12,7 @@ function InfoCard({
   address,
   mapsUrl,
   mapsLabel,
+  action,
   delay = 0,
 }: {
   label: string;
@@ -18,6 +20,7 @@ function InfoCard({
   address?: string;
   mapsUrl?: string;
   mapsLabel?: string;
+  action?: React.ReactNode;
   delay?: number;
 }) {
   return (
@@ -53,6 +56,7 @@ function InfoCard({
             {mapsLabel}
           </a>
         )}
+        {action && <div className="mt-3">{action}</div>}
       </div>
     </RevealOnScroll>
   );
@@ -70,6 +74,7 @@ export default function PracticalInfo() {
           <InfoCard
             label={t(practicalInfo.date.label, locale)}
             value={t(practicalInfo.date.value, locale)}
+            action={<AddToCalendarButton variant="inline" />}
             delay={0}
           />
           <InfoCard

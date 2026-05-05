@@ -101,6 +101,27 @@ export const practicalInfo = {
   },
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.916227304622!2d4.8994071759475695!3d44.43488060152543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b57bbd8acc02e1%3A0x89021ec77555c2f9!2sDomaine%20du%20Bijoutier%20-%20Mariages!5e0!3m2!1sen!2sfr!4v1775210755252!5m2!1sen!2sfr',
+  addToCalendar: {
+    buttonLabel: {
+      fr: 'Ajouter au calendrier Google',
+      es: 'Añadir al calendario de Google',
+      en: 'Add to Google calendar',
+    },
+    eventTitle: {
+      fr: 'Mariage Alice & Gaston',
+      es: 'Boda Alice & Gaston',
+      en: "Alice & Gaston's Wedding",
+    },
+    eventDescription: {
+      fr: "Mariage d'Alice et Gaston au Domaine du Bijoutier, du 25 au 27 septembre 2026. Toute l'information sur: www.dijo-oui.com",
+      es: 'Boda de Alice y Gaston en el Domaine du Bijoutier, del 25 al 27 de septiembre de 2026. Toda la información en: www.dijo-oui.com',
+      en: "Alice & Gaston's wedding at Domaine du Bijoutier, September 25\u201327, 2026. All information at: www.dijo-oui.com",
+    },
+    eventLocation:
+      'Domaine du Bijoutier, 525 route de Bayonne, 26230 Grignan, France',
+    startDate: '20260925',
+    endDateExclusive: '20260928',
+  },
 };
 
 // ─── Getting there ───────────────────────────
