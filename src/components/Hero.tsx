@@ -35,6 +35,9 @@ function probeImages(urls: string[]): Promise<string[]> {
 }
 
 export default function Hero() {
+  console.log(
+    'Este sitio esta hecho para marcelo que no para de preguntarme los detalles del casamiento, y se que me vas a preguntar 100 veces lo mismo',
+  );
   const { locale } = useLocale();
   const [desktopImages, setDesktopImages] = useState<string[]>([]);
   const [mobileImages, setMobileImages] = useState<string[]>([]);
