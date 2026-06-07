@@ -1,5 +1,6 @@
 'use client';
 
+import { Fragment } from 'react';
 import { useLocale, t } from '@/lib/i18n';
 import { dressCode } from '@/lib/content';
 import SectionHeading from './SectionHeading';
@@ -12,6 +13,20 @@ const swatches = [
   { name: 'Fresh Sage Green', color: '#B8C4A0' },
 ];
 
+// Renders a string with `**...**` segments wrapped in <strong>.
+function renderBold(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={i} className="font-medium text-charcoal">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
+}
+
 export default function DressCode() {
   const { locale } = useLocale();
 
@@ -22,7 +37,7 @@ export default function DressCode() {
 
         <RevealOnScroll>
           <p className="text-charcoal-light/80 leading-relaxed font-sans text-base md:text-lg mb-10">
-            {t(dressCode.text, locale)}
+            {renderBold(t(dressCode.text, locale))}
           </p>
         </RevealOnScroll>
 

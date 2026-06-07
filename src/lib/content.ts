@@ -319,9 +319,9 @@ export const dressCode = {
     en: 'Dress code',
   },
   text: {
-    fr: 'Tenue de cocktail élégante : robes longues, sans robes blanches ni noires. Toutes les autres couleurs sont les bienvenues. Pour les hommes : costume, cravate facultative. La palette de couleurs du mariage est donnée à titre indicatif, sans obligation. Pour les chaussures, veuillez noter que le sol de l’espace cocktail est composé de petits cailloux, nous vous recommandons donc d’éviter les talons trop fins.',
-    es: 'Traje de cóctel elegante: vestidos largos, sin vestidos blancos ni negros. Todos los demás colores son bienvenidos. Para los hombres: traje, corbata opcional. La paleta de colores de la boda es solo una guía, sin obligación. Para el calzado tengan en cuenta que el piso del lugar donde sera el cocktail tiene pequeñas piedras, por lo que recomendamos no usar tacos muy finos.',
-    en: 'Elegant cocktail attire: long dresses, no white or black dresses. All other colors are welcome. For men: suits, with ties optional. The wedding color palette is just a guide, not a requirement. For shoes please note that the floor of the place where the cocktail will be has small stones, so we recommend not using very thin heels.',
+    fr: 'Tenue de cocktail élégante : robes longues, sans robes blanches ni noires. Toutes les autres couleurs sont les bienvenues. Pour les hommes : costume, cravate facultative. **La palette de couleurs du mariage est donnée à titre indicatif, sans obligation.** Pour les chaussures, veuillez noter que le sol de l’espace cocktail est composé de petits cailloux, nous vous recommandons donc d’éviter les talons trop fins.',
+    es: 'Traje de cóctel elegante: para las mujeres: vestidos largos, sin vestidos blancos ni negros. Todos los demás colores son bienvenidos. Para los hombres: traje, corbata opcional. **La paleta de colores de la boda es solo una guía, sin obligación.** Para el calzado tengan en cuenta que el piso del lugar donde sera el cocktail tiene pequeñas piedras, por lo que recomendamos no usar tacos muy finos.',
+    en: 'Elegant cocktail attire: long dresses, no white or black dresses. All other colors are welcome. For men: suits, with ties optional. **The wedding color palette is just a guide, not a requirement.** For shoes please note that the floor of the place where the cocktail will be has small stones, so we recommend not using very thin heels.',
   },
 };
 
