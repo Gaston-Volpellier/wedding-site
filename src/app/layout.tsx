@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description:
     'Nous avons hâte de célébrer ce jour avec vous. Toutes les informations pour notre mariage.',
   icons: {
-    icon: [{ url: '/icon.png', type: 'image/png' }],
-    apple: [{ url: '/icon.png', type: 'image/png' }],
+    icon: [{ url: '/images/logo.png', type: 'image/png' }],
+    apple: [{ url: '/images/logo.png', type: 'image/png' }],
   },
 };
 

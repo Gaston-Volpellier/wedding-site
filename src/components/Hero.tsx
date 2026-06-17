@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useLocale, t } from '@/lib/i18n';
 import { hero } from '@/lib/content';
+import Logo from '@/components/Logo';
 
 const DESKTOP_CANDIDATES = [
   '/images/hero_1.jpeg',
@@ -106,6 +107,11 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 text-center text-white px-6 max-w-3xl mx-auto">
+        <Logo
+          variant="light"
+          className="h-24 md:h-32 lg:h-36 w-auto mx-auto mb-10 opacity-95"
+        />
+
         <p className="text-sm tracking-[0.3em] uppercase font-sans mb-6 opacity-90">
           {t(hero.date, locale)}
         </p>

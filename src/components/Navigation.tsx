@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useLocale, t, type Locale } from '@/lib/i18n';
 import { nav } from '@/lib/content';
+import Logo from '@/components/Logo';
 
 const localeLabels: Record<Locale, string> = {
   fr: 'FR',
@@ -47,14 +48,17 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo / couple name */}
+          {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className={`font-serif text-lg tracking-wide transition-colors duration-300 cursor-pointer ${
-              scrolled ? 'text-charcoal' : 'text-white'
-            }`}
+            className="cursor-pointer transition-opacity duration-300 hover:opacity-80"
+            aria-label="Retour en haut"
           >
-            A &amp; G
+            <Logo
+              variant={scrolled ? 'dark' : 'light'}
+              className="h-9 w-auto"
+              priority
+            />
           </button>
 
           {/* Desktop links */}
