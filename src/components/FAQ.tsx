@@ -6,17 +6,35 @@ import { faq } from '@/lib/content';
 import SectionHeading from './SectionHeading';
 import RevealOnScroll from './RevealOnScroll';
 
+type ProcessedLodging = {
+  name: string;
+  description?: string;
+  address?: string;
+  phones?: string[];
+  email?: string;
+  website?: string;
+};
+
+type ProcessedLodgings = {
+  guestHousesTitle: string;
+  guestHouses: ProcessedLodging[];
+  hotelsTitle: string;
+  hotels: string[];
+};
+
 function FAQItem({
   question,
   answer,
   link,
   linkLabel,
+  lodgings,
   delay,
 }: {
   question: string;
   answer: string;
   link?: string;
   linkLabel?: string;
+  lodgings?: ProcessedLodgings;
   delay: number;
 }) {
   const [open, setOpen] = useState(false);
@@ -54,6 +72,86 @@ function FAQItem({
             <p className="text-sm text-charcoal-light/70 leading-relaxed font-sans pr-8">
               {answer}
             </p>
+
+            {lodgings && (
+              <div className="mt-6 space-y-6 pr-8">
+                <div>
+                  <p className="text-xs tracking-[0.2em] uppercase text-taupe-dark font-sans mb-4">
+                    {lodgings.guestHousesTitle}
+                  </p>
+                  <div className="space-y-5">
+                    {lodgings.guestHouses.map((house, i) => (
+                      <div key={i} className="text-sm font-sans space-y-0.5">
+                        <p className="font-semibold text-charcoal">{house.name}</p>
+                        {house.description && (
+                          <p className="text-charcoal-light/70 italic">{house.description}</p>
+                        )}
+                        {house.address && (
+                          <p className="text-charcoal-light/70">{house.address}</p>
+                        )}
+                        {house.phones?.map((phone, pi) => (
+                          <p key={pi} className="text-charcoal-light/70">
+                            <a
+                              href={`tel:${phone.replace(/\s/g, '')}`}
+                              className="hover:text-charcoal transition-colors"
+                            >
+                              {phone}
+                            </a>
+                          </p>
+                        ))}
+                        {house.email && (
+                          <p>
+                            <a
+                              href={`mailto:${house.email}`}
+                              className="text-taupe-dark hover:text-charcoal transition-colors"
+                            >
+                              {house.email}
+                            </a>
+                          </p>
+                        )}
+                        {house.website && (
+                          <p>
+                            <a
+                              href={
+                                house.website.startsWith('http')
+                                  ? house.website
+                                  : `https://${house.website}`
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-taupe-dark hover:text-charcoal transition-colors"
+                            >
+                              {house.website}
+                            </a>
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-xs tracking-[0.2em] uppercase text-taupe-dark font-sans mb-3">
+                    {lodgings.hotelsTitle}
+                  </p>
+                  <div className="space-y-1">
+                    {lodgings.hotels.map((url, i) => (
+                      <p key={i}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-sans text-charcoal-light/70 hover:text-charcoal transition-colors"
+                        >
+                          {url}
+                        </a>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
             {link && linkLabel && (
               <a
                 href={link}
@@ -91,16 +189,38 @@ export default function FAQ() {
         <SectionHeading>{t(faq.title, locale)}</SectionHeading>
 
         <div>
-          {faq.items.map((item, i) => (
-            <FAQItem
-              key={i}
-              question={t(item.question, locale)}
-              answer={t(item.answer, locale)}
-              link={item.link}
-              linkLabel={item.linkLabel ? t(item.linkLabel, locale) : undefined}
-              delay={i * 80}
-            />
-          ))}
+          {faq.items.map((item, i) => {
+            const rawLodgings = 'lodgings' in item ? item.lodgings : undefined;
+            const processedLodgings = rawLodgings
+              ? {
+                  guestHousesTitle: t(rawLodgings.guestHousesTitle, locale),
+                  guestHouses: rawLodgings.guestHouses.map((gh) => ({
+                    ...gh,
+                    description: gh.description
+                      ? t(gh.description, locale)
+                      : undefined,
+                  })),
+                  hotelsTitle: t(rawLodgings.hotelsTitle, locale),
+                  hotels: rawLodgings.hotels,
+                }
+              : undefined;
+
+            return (
+              <FAQItem
+                key={i}
+                question={t(item.question, locale)}
+                answer={t(item.answer, locale)}
+                link={'link' in item ? item.link : undefined}
+                linkLabel={
+                  'linkLabel' in item && item.linkLabel
+                    ? t(item.linkLabel, locale)
+                    : undefined
+                }
+                lodgings={processedLodgings}
+                delay={i * 80}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

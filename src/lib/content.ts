@@ -42,9 +42,9 @@ export const hero = {
     en: 'Domaine du Bijoutier, Drôme',
   },
   subtitle: {
-    fr: 'Nous avons hâte de célébrer ce jour avec vous',
-    es: 'Queremos celebrar este día con ustedes',
-    en: 'We cannot wait to celebrate this day with you',
+    fr: 'Un voyage, une rencontre, un mariage',
+    es: 'Un viaje, un encuentro, una boda',
+    en: 'A journey, a meeting, a wedding',
   },
   cta: {
     fr: 'Voir le programme',
@@ -213,6 +213,14 @@ export const programme = {
           },
         },
         {
+          time: '16:00',
+          title: {
+            fr: 'Pool party',
+            es: 'Pool party',
+            en: 'Pool party',
+          },
+        },
+        {
           time: '20:00',
           title: {
             fr: 'Empanadas night',
@@ -253,7 +261,7 @@ export const programme = {
           },
         },
         {
-          time: '17:45',
+          time: '17:00  ',
           title: {
             fr: "Vin d'honneur",
             es: 'Cóctel de honor',
@@ -266,7 +274,7 @@ export const programme = {
           },
         },
         {
-          time: '20:00',
+          time: '21:00',
           title: { fr: 'Dîner', es: 'Cena', en: 'Dinner' },
           description: {
             fr: 'Dîner assis',
@@ -303,7 +311,15 @@ export const programme = {
           },
         },
         {
-          time: '17:30',
+          time: '14:00',
+          title: {
+            fr: 'Pool party',
+            es: 'Pool party',
+            en: 'Pool party',
+          },
+        },
+        {
+          time: '17:00',
           title: { fr: 'Départ', es: 'Despedida', en: 'Departure' },
         },
       ],
@@ -380,15 +396,118 @@ export const faq = {
         en: 'Where can we stay?',
       },
       answer: {
-        fr: 'Il y a plusieurs hôtels à Grignan et dans les environs, nous vous laissons une liste avec quelques options. Nous vous recommandons aussi Airbnb, il y a quelques options avec des gîtes pour plusieurs personnes à moins de 10 minutes en voiture du domaine.',
-        es: 'Hay varios hoteles en Grignan y sus alrededores, les dejamos una lista con algunos de ellos. Tambien les recomendamos Airbnb, hay algunas opciones con cabañas para muchas personas a menos de 10 minutos de auto del dominio.',
-        en: 'There are several hotels in Grignan and its surroundings, we leave you here a list with some of them. We also recommend Airbnb, there are some options with cabins for many people within 10 minutes of auto from the domain.',
+        fr: 'Vous pouvez consulter Airbnb ou Booking, ou bien la liste suivante :',
+        es: 'Pueden checkear Airbnb o Booking, o también la siguiente lista :',
+        en: 'You can check Airbnb or Booking, or the following list:',
       },
-      link: 'https://maps.app.goo.gl/biAcLYPQf3wZ9vZQA',
-      linkLabel: {
-        fr: 'Voir la liste',
-        es: 'Ver la lista',
-        en: 'See the list',
+      lodgings: {
+        guestHousesTitle: {
+          fr: "Chambres d'hôtes & gîtes",
+          es: "Chambres d'hôtes & gîtes rurales",
+          en: 'Guest houses & cottages',
+        },
+        guestHouses: [
+          {
+            name: 'Ferme le Grand Cordy',
+            description: {
+              fr: "Chambres et tables d'hôtes",
+              es: 'Habitaciones y mesas de huéspedes',
+              en: 'Rooms and guest tables',
+            },
+            address: '1120, Route de Montélimar',
+            phones: ['+33 04 75 46 91 81'],
+          },
+          {
+            name: 'La Maison du Moulin',
+            description: {
+              fr: "Chambres et tables d'hôtes",
+              es: 'Habitaciones y mesas de huéspedes',
+              en: 'Rooms and guest tables',
+            },
+            address: '550, Chemin de la Motte (Cordy)',
+            phones: ['+33 04 75 46 56 94', '+33 06 23 26 23 60'],
+            email: 'maisondumoulin@wanadoo.fr',
+          },
+          {
+            name: 'La Vie de Château',
+            description: {
+              fr: "Maison de charme à l'entrée du château",
+              es: 'Casa con encanto a la entrada del castillo',
+              en: 'Charming house at the entrance of the castle',
+            },
+            address: '14 rue Montant au Château',
+            phones: ['+33 04 75 46 57 30', '+33 06 76 52 70 96'],
+            email: 'laviedechateau@gmail.com',
+            website: 'www.laviedechateau26.fr',
+          },
+          {
+            name: 'Le Clos de la Tuilière',
+            description: {
+              fr: "Chambres et tables d'hôtes",
+              es: 'Habitaciones y mesas de huéspedes',
+              en: 'Rooms and guest tables',
+            },
+            address: '80, Hameau de la Grande Tuilière',
+            phones: ['+33 04 75 46 75 35'],
+            website: 'www.leclosdelatuiliere.fr',
+          },
+          {
+            name: 'Le Mas au Jardin Secret',
+            description: {
+              fr: "Un lieu de retraite provençal idéal, situé à seulement 800 mètres du plus beau château renaissance du sud-est de la France. Chambres d'hôtes.",
+              es: 'Un lugar de retiro provenzal ideal; situado a tan solo 800 metros del castillo renacentista más bello del sureste de Francia. Habitaciones de huéspedes.',
+              en: 'An ideal Provençal retreat located just 800 metres from the most beautiful Renaissance castle in south-east France. Guest rooms.',
+            },
+            address: '800 Route de Taulignan',
+            phones: ['+33 04 75 00 03 83'],
+            email: 'info@le-mas-au-jardin-secret.fr',
+          },
+          {
+            name: "Le Patio Chambres d'hôtes",
+            address: 'Moulin Dumas, Chemin de Carrois – 26230 Grignan',
+            phones: ['+33 04 75 98 60 75'],
+          },
+          {
+            name: 'Au fil des Flots',
+            description: {
+              fr: 'Gîte à 200 m du Domaine du Bijoutier',
+              es: 'Casa rural a 200 m del Bijoutier',
+              en: 'Country house 200 m from Le Bijoutier',
+            },
+            address: 'Le Foulon, 26230 Grignan',
+            email: 'aufildesflots@gmail.com',
+          },
+          {
+            name: 'La Maison Grignan',
+            description: {
+              fr: 'Gîte à 200 m du Domaine du Bijoutier',
+              es: 'Casa rural a 200 m del Bijoutier',
+              en: 'Country house 200 m from Le Bijoutier',
+            },
+            phones: ['+33 06 69 10 24 78'],
+          },
+          {
+            name: 'Gîte Gonzalès',
+            description: {
+              fr: 'Gîte rural. Trajet aller-retour possible.',
+              es: 'Casa rural. Traslado ida/vuelta posible.',
+              en: 'Country house. Transfer to/from the venue possible.',
+            },
+            address: '95 route de Grignan, Chamaret',
+            phones: ['+33 06 37 30 05 25'],
+            email: 'logementsprovence@outlook.fr',
+          },
+        ],
+        hotelsTitle: {
+          fr: 'Hôtels',
+          es: 'Hoteles',
+          en: 'Hotels',
+        },
+        hotels: [
+          'https://www.clairplume.com/',
+          'https://www.domaine-de-montine.com',
+          'https://www.labastidedegrignan.com',
+        ],
       },
     },
     {
