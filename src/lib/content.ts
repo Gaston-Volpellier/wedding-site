@@ -362,7 +362,33 @@ export const giftList = {
 };
 
 // ─── FAQ ─────────────────────────────────────
-export const faq = {
+type Translated = Record<Locale, string>;
+
+type FaqLodging = {
+  name: string;
+  description?: Translated;
+  address?: string;
+  phones?: string[];
+  email?: string;
+  website?: string;
+};
+
+type FaqLodgings = {
+  guestHousesTitle: Translated;
+  guestHouses: FaqLodging[];
+  hotelsTitle: Translated;
+  hotels: string[];
+};
+
+type FaqItem = {
+  question: Translated;
+  answer: Translated;
+  link?: string;
+  linkLabel?: Translated;
+  lodgings?: FaqLodgings;
+};
+
+export const faq: { title: Translated; items: FaqItem[] } = {
   title: { fr: 'Questions fréquentes', es: 'Preguntas frecuentes', en: 'FAQ' },
   items: [
     {
