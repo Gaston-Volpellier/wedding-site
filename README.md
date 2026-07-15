@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Chatbot widget
+
+The site includes a floating chat widget (`src/components/Chatbot.tsx`) that
+talks to the separate backend in [`chatbot-backend/`](chatbot-backend/) (see
+that directory's README for running/deploying it).
+
+Copy `.env.local.example` to `.env.local` and point
+`NEXT_PUBLIC_CHATBOT_API_URL` at wherever that backend is running — it
+defaults to `http://localhost:8080` if unset.
+
+**Local dev gotcha:** the backend only accepts requests from the single
+origin in its own `ALLOWED_ORIGIN` env var, matched exactly against what the
+browser sends. If you're running both locally, start the backend with
+`ALLOWED_ORIGIN=http://localhost:3000` (not its production `.env` value) or
+the browser will silently block every chat request with a CORS error while
+`curl` requests against it keep working fine.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

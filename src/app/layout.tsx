@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { I18nProvider } from '@/lib/i18n';
+import Chatbot from '@/components/Chatbot';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -38,7 +39,10 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          {children}
+          <Chatbot />
+        </I18nProvider>
         <Analytics />
       </body>
     </html>

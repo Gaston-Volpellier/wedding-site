@@ -563,6 +563,59 @@ export const faq: { title: Translated; items: FaqItem[] } = {
   ],
 };
 
+// ─── Chatbot ─────────────────────────────────
+export const chatbot = {
+  launcherLabel: {
+    fr: 'Une question ?',
+    es: '¿Una pregunta?',
+    en: 'Questions?',
+  },
+  panelTitle: {
+    fr: 'Assistant mariage',
+    es: 'Asistente de boda',
+    en: 'Wedding assistant',
+  },
+  closeLabel: { fr: 'Fermer', es: 'Cerrar', en: 'Close' },
+  sendLabel: { fr: 'Envoyer', es: 'Enviar', en: 'Send' },
+  welcomeMessage: {
+    fr: "Bonjour ! Je suis là pour vous aider à organiser votre venue au mariage : lieu, hébergement, transport, programme... Posez-moi vos questions !",
+    es: '¡Hola! Estoy aquí para ayudarte a planear tu viaje a la boda: lugar, alojamiento, transporte, programa... ¡Preguntame lo que quieras!',
+    en: "Hi! I'm here to help you plan your trip to the wedding: venue, lodging, transport, schedule... Ask me anything!",
+  },
+  inputPlaceholder: {
+    fr: 'Écrivez votre question…',
+    es: 'Escribe tu pregunta…',
+    en: 'Type your question…',
+  },
+  errorMessage: {
+    fr: "Une erreur s'est produite. Réessayez dans un instant, ou écrivez-nous à mariagegastonalice@gmail.com.",
+    es: 'Ocurrió un error. Intenta de nuevo en un momento, o escríbenos a mariagegastonalice@gmail.com.',
+    en: 'Something went wrong. Please try again in a moment, or email us at mariagegastonalice@gmail.com.',
+  },
+  quickQuestions: [
+    {
+      fr: 'À quelle heure est la cérémonie ?',
+      es: '¿A qué hora es la ceremonia?',
+      en: 'What time is the ceremony?',
+    },
+    {
+      fr: 'Où pouvons-nous loger ?',
+      es: '¿Dónde podemos alojarnos?',
+      en: 'Where can we stay?',
+    },
+    {
+      fr: 'Comment venir jusqu’au domaine ?',
+      es: '¿Cómo llegamos al lugar?',
+      en: 'How do we get there?',
+    },
+    {
+      fr: 'Quel est le dress code ?',
+      es: '¿Cuál es el código de vestimenta?',
+      en: "What's the dress code?",
+    },
+  ] satisfies Translated[],
+};
+
 // ─── Footer ──────────────────────────────────
 export const footer = {
   names: 'Alice & Gaston',
