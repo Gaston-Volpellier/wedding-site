@@ -36,9 +36,6 @@ function probeImages(urls: string[]): Promise<string[]> {
 }
 
 export default function Hero() {
-  console.log(
-    'Este sitio esta hecho para marcelo que no para de preguntarme los detalles del casamiento, y se que me vas a preguntar 100 veces lo mismo',
-  );
   const { locale } = useLocale();
   const [desktopImages, setDesktopImages] = useState<string[]>([]);
   const [mobileImages, setMobileImages] = useState<string[]>([]);
@@ -75,7 +72,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/20 to-charcoal/40 z-10" />
+      <div className="absolute inset-0 bg-linear-to-b from-charcoal/30 via-charcoal/20 to-charcoal/40 z-10" />
 
       {/* Desktop slides */}
       {desktopImages.map((src, i) => (
