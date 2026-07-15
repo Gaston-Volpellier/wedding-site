@@ -66,7 +66,7 @@ export default function Chatbot() {
               text: t(chatbot.welcomeMessage, locale),
               synthetic: true,
             },
-          ]
+          ],
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated]);
@@ -167,7 +167,7 @@ export default function Chatbot() {
         role="dialog"
         aria-modal="true"
         aria-label={t(chatbot.panelTitle, locale)}
-        className={`fixed z-50 flex flex-col bg-cream border border-charcoal/10 shadow-2xl transition-all duration-300 ease-out inset-x-3 top-20 bottom-3 md:inset-x-auto md:top-auto md:bottom-5 md:right-5 md:w-96 md:h-[600px] md:max-h-[calc(100vh-2.5rem)] ${
+        className={`fixed z-50 flex flex-col bg-cream border border-charcoal/10 shadow-2xl transition-all duration-300 ease-out inset-x-3 top-20 bottom-3 md:inset-x-auto md:top-auto md:bottom-5 md:right-5 md:w-96 md:h-150 md:max-h-[calc(100vh-2.5rem)] ${
           open
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'
@@ -220,7 +220,9 @@ export default function Chatbot() {
             </div>
           )}
 
-          {error && <p className="text-xs text-red-700/80 font-sans px-1">{error}</p>}
+          {error && (
+            <p className="text-xs text-red-700/80 font-sans px-1">{error}</p>
+          )}
         </div>
 
         {/* Quick questions */}

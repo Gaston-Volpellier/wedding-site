@@ -72,7 +72,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/20 to-charcoal/40 z-10" />
+      <div className="absolute inset-0 bg-linear-to-b from-charcoal/30 via-charcoal/20 to-charcoal/40 z-10" />
 
       {/* Desktop slides */}
       {desktopImages.map((src, i) => (

@@ -47,7 +47,12 @@ curl -X POST http://localhost:8080/chat \
 ```json
 [
   { "role": "user", "parts": [{ "text": "What time is the ceremony?" }] },
-  { "role": "model", "parts": [{ "text": "The ceremony starts at 2:50 PM on Saturday, September 26." }] }
+  {
+    "role": "model",
+    "parts": [
+      { "text": "The ceremony starts at 2:50 PM on Saturday, September 26." }
+    ]
+  }
 ]
 ```
 
@@ -56,12 +61,12 @@ each request; the backend itself doesn't persist conversations.
 
 ## Environment variables
 
-| Variable          | Required | Description                                                                 |
-| ------------------ | -------- | ----------------------------------------------------------------------------- |
-| `GEMINI_API_KEY`   | Yes      | Gemini API key. In production this comes from Secret Manager, not a `.env` file. |
-| `ALLOWED_ORIGIN`   | Yes      | The single origin allowed to call this API (your Vercel site URL, e.g. `https://your-wedding-site.vercel.app`). |
-| `PORT`             | No       | Port to listen on. Cloud Run sets this automatically — default is `8080` for local runs. |
-| `DAILY_LIMIT`      | No       | Max total `/chat` requests served per calendar day. Defaults to `400`.       |
+| Variable         | Required | Description                                                                                                     |
+| ---------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
+| `GEMINI_API_KEY` | Yes      | Gemini API key. In production this comes from Secret Manager, not a `.env` file.                                |
+| `ALLOWED_ORIGIN` | Yes      | The single origin allowed to call this API (your Vercel site URL, e.g. `https://your-wedding-site.vercel.app`). |
+| `PORT`           | No       | Port to listen on. Cloud Run sets this automatically — default is `8080` for local runs.                        |
+| `DAILY_LIMIT`    | No       | Max total `/chat` requests served per calendar day. Defaults to `400`.                                          |
 
 The server exits immediately on startup if `GEMINI_API_KEY` or
 `ALLOWED_ORIGIN` is missing, so misconfiguration fails loudly instead of
