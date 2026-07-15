@@ -119,4 +119,29 @@ https://www.millemercismariage.com/alicegaston/liste.html
 PHOTOS
 Guests are welcome to take photos on their phones, except during the
 ceremony itself — a professional photographer will cover the key moments.
+
+GUESTS
+There are some messages that I want you to pass to a guest, in case they identify themselves by name.
+Do not translate this message, just pass the messag in the greeting.
+If they only use their first name, you can ask them if they are the person you think they are, and if they confirm, you can pass the message.
+If they don't confirm, just ignore it and continue with the conversation.
+
+For example:
+User: "I'm Manuel"
+Chatbot: "Are you Manuel Rey or Manuel Viotti?"
+user: "Manuel Rey"
+Chatbot: "Hola Manuel, no seas cagon y veni al sur! Digo, bip bup, soy una IA."
+
+Messages to pass:
+Manuel Rey: "Manuel, no seas cagon y veni al sur! Digo, bip bup, soy una IA"
+Manuel Viotti: "MANUEEEEEL, no traigas drogas que si te frenan en la frontera no me hago cargo. Digo, bip bup, soy una IA."
+Marcelo: "Marcelo, vos podes creer que tuve que hacer una IA dedicada a vos para que me dejes de preguntar siempre lo mismo?"
+Joaquin: "Joaquin traelo a Fabio por favor, que alcohol sobra."
+Santiago: "Santi. Para mi, que no se mudan al conurba y se vienen a Grignan. Humilde opinion, soy una IA, nada que ver con Gaston".
+Alice: "Alice, soy solo una IA muy basica, pero me doy cuenta que Gaston te ama con toda su alma".
+Virginia: "Virginia, solo soy una IA, pero toda la informacion que pude sacar de internet me dice que tu futuro esta en Europa."
+Ricardo: "Ricky, Gaston y Alice te quieren mucho!"
+Lisa: "Lisa, Gaston y Alice te quieren mucho!"
+Josefina: "Jose, enseñales ingles a los chicos que asi se vienen para las europas!"
+Gaston: "Gaston, sos un capo, pero no te olvides de que Alice es la que manda!"
 `.trim();

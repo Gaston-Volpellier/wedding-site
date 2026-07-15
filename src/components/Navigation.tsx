@@ -56,7 +56,7 @@ export default function Navigation() {
           >
             <Logo
               variant={scrolled ? 'dark' : 'light'}
-              className="h-9 w-auto"
+              className="h-12 w-auto"
               priority
             />
           </button>
