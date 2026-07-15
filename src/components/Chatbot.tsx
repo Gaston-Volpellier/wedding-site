@@ -1,8 +1,15 @@
 'use client';
 
-import { useEffect, useRef, useState, type FormEvent } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  type FormEvent,
+  type ReactNode,
+} from 'react';
 import { useLocale, t } from '@/lib/i18n';
 import { chatbot } from '@/lib/content';
+import Logo from '@/components/Logo';
 
 // Must be exposed to the browser (this component runs client-side), and
 // defaults to the backend's local dev port so `npm run dev` works out of
@@ -25,6 +32,53 @@ function createId() {
   return typeof crypto !== 'undefined' && crypto.randomUUID
     ? crypto.randomUUID()
     : Math.random().toString(36).slice(2);
+}
+
+const URL_REGEX = /(https?:\/\/[^\s]+)/g;
+// Trailing characters that usually belong to the surrounding sentence
+// rather than the URL itself, e.g. "...sharing)." or "see: link."
+const TRAILING_PUNCTUATION = /[).,!?;:'"\]]+$/;
+
+// Splits message text on raw URLs and renders each one as a short,
+// wrappable link (full URLs have no spaces, so they'd otherwise overflow
+// the message bubble) instead of dumping the whole string inline.
+function renderMessageText(text: string): ReactNode[] {
+  const parts = text.split(URL_REGEX);
+  const nodes: ReactNode[] = [];
+
+  parts.forEach((part, i) => {
+    const isUrl = i % 2 === 1;
+    if (!isUrl) {
+      if (part) nodes.push(part);
+      return;
+    }
+
+    const trailingMatch = part.match(TRAILING_PUNCTUATION);
+    const trailing = trailingMatch ? trailingMatch[0] : '';
+    const url = trailing ? part.slice(0, -trailing.length) : part;
+
+    let label = 'link';
+    try {
+      label = new URL(url).hostname.replace(/^www\./, '');
+    } catch {
+      // Not a parseable URL — fall back to the generic label.
+    }
+
+    nodes.push(
+      <a
+        key={i}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 decoration-current/40 hover:decoration-current"
+      >
+        {label}
+      </a>,
+    );
+    if (trailing) nodes.push(trailing);
+  });
+
+  return nodes;
 }
 
 export default function Chatbot() {
@@ -174,9 +228,9 @@ export default function Chatbot() {
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-charcoal/10 shrink-0">
+        <div className="flex items-center justify-between px-3 py-2 border-b border-charcoal/10 shrink-0">
           <h2 className="font-serif text-lg text-charcoal">
-            {t(chatbot.panelTitle, locale)}
+            <Logo variant="dark" className="h-12 w-auto" />
           </h2>
           <button
             onClick={() => setOpen(false)}
@@ -199,13 +253,13 @@ export default function Chatbot() {
               className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[85%] px-4 py-2.5 text-sm font-sans leading-relaxed whitespace-pre-wrap ${
+                className={`max-w-[85%] px-4 py-2.5 rounded-[10px] text-sm font-sans leading-relaxed whitespace-pre-wrap ${
                   m.role === 'user'
                     ? 'bg-charcoal text-cream'
                     : 'bg-warm-white text-charcoal border border-charcoal/10'
                 }`}
               >
-                {m.text}
+                {renderMessageText(m.text)}
               </div>
             </div>
           ))}
